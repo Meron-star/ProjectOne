@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+
+    <head>
+
+        <!-- meta settings -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=7">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <!-- title -->
+        <title>To Do App</title>
+   </head>
+   <body>
+    <header>
+        <h2>To Do App</h2>
+        <hr>
+    </header>
+    <nav class="navbar-light bg-light navbar navbar-expand-sm">
+        <a class="navbar-brand"><img src="./Logo.jpg" alt="Gloria's Gardening Logo" height="30"></a>
+        <!-- Add the <a> below: -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <!-- Make the follow elements into a nav component: -->
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a href="#" class="nav-link">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link">TodoList</a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link">Contacts</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+    <form>
+    <section class="Name">
+        <label for="Name">Name</label>
+        <input type="text" name="Name" id="Name">
+        </section>
+        <br>
+           
+        <section class="Description">
+            <label for="Description">Description</label>
+            <textarea name="Description" id="Description"></textarea>
+            </section>
+            <br>
+           
+        <section class="AssignedTo">
+            <label for="AssignedTo">Assigned To</label>
+            <select name="AssignedTo" id="AssignedTo">
+                <option value="Meron">Meron</option>
+                <option value="Seble">Seble</option>
+                <option value="Lace">Lace</option>
+                <option value="Vtdhya">Vidhya</option>
+                </select>
+            </section>
+            <br>
+            <section class="DueDate">
+                <label for="DueDate">DueDate</label>
+            <input type="date" id="DueDate" name="DueDate">
+            </section>
+            <br>
+                <section class="Status">
+                    <label for="Status">Status</label>
+                    <select name="Status" id="Status">
+                        <option value="Assigned">Assigned</option>
+                        <option value="InProgress">InProgress</option>
+                        <option value="Done">Done</option>
+                        </select>
+                    </section>
+                    <br>
+                    <section>
+                        <input type="submit" value="Send">
+                    </section>
+                </form>
+                   <!-- Row with cards -->
+        <div class="row">
+        <div class="col-4">
+          <!-- Add your first card below: -->
+          <div class="card">
+            <div class="card-header">
+              Vidhya <br> Wireframe
+            </div>
+            <img class="card-img-top" src="https://content.codecademy.com/courses/learn-bootstrap-components/flowers.png" alt="flowers in bloom">
+            <div class="card-body">
+              <p class=" card-text">
+                 Done                   Delete
+              </p>
+            </div>
+          </div>
+        </div>
+        </div>
+        </div>
+        <div>
+                           </body>
+
+   </html>
+    
