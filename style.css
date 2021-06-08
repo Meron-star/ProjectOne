@@ -7,26 +7,26 @@
 }
 #card1{
     font-family: Helvetica;
-    background-color: lightgreen;
+    background-color: greenyellow;
   }
     
   #card2{
     font-family: Helvetica;
-    background-color: lightgreen;
+    background-color: greenyellow;
   }
     
   #card3{
     font-family: Helvetica;
-    background-color: lightgreen;
+    background-color: greenyellow;
   }
     
   #card4{
     font-family: Helvetica;
-    background-color: lightgreen;
+    background-color: greenyellow;
   }
   #card5{
     font-family: Helvetica;
-    background-color: lightgreen;
+    background-color: greenyellow;
   }
 
   body {
@@ -36,11 +36,10 @@
 }
 
 form {
-  width: 300px;
+  width: 400px;
   margin: 0 auto;
 }
 
 .input {
   background-color: yellow-100;
 }
-    
