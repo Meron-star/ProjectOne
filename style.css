@@ -28,12 +28,18 @@
     font-family: Helvetica;
     background-color: greenyellow;
   }
-    
-#list1{
-    font-family: Helvetica;
-    background-color: grey;
-  }
 
+  body {
+    background-color : #484848;
+    margin: 0;
+    padding: 0;
+}
 
-    
-  }
+form {
+  width: 400px;
+  margin: 0 auto;
+}
+
+.input {
+  background-color: yellow-100;
+}
