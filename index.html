@@ -9,6 +9,7 @@
         <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=7">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="style.css">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
         <!-- title -->
         <title>To Do App</title>
@@ -41,8 +42,9 @@
       </ul>
     </div>
   </nav>
-    <form>
-    <section class="Name">
+  <div class="margin auto">
+    <form id="taskentry">
+      <section class="Name">
         <label for="Name">Name</label>
         <input type="text" name="Name" id="Name">
         </section>
@@ -81,25 +83,94 @@
                     <section>
                         <input type="submit" value="Send">
                     </section>
-                </form>
+                  </form>
+                </div>
                 <br>
                    <!-- Row with cards -->
-                   <div class="card" style="width: 18rem;">
-                    <div class="card-body">
-                      <h5 class="card-title">Task1</h5>
-                    </div>
-                    <ul class="list-group list-group-flush">
-                      <li class="list-group-item">Name : Task1</li>
-                      <li class="list-group-item">Description : Wireframe </li>
-                      <li class="list-group-item">AssignedTo : Vidhya</li>
-                      <li class="list-group-item">Duedate : 06/08/2021</li>
-                      <li class="list-group-item">Status : Done</li>
-                    </ul>
-                    <div class="card-body">
-                      <a href="#" class="card-link">Card link</a>
-                      <a href="#" class="card-link">Another link</a>
-                    </div>
-                  </div>
+                     <!-- Row with cards -->
+                     <div class="row">
+                      <div class="card m-1" id="card1" style="width: 18rem;">
+                       <div class="card-body">
+                         <h5 class="card-title">Card-1</h5>
+                       </div>
+                       <ul class="list-group list-group-flush">
+                         <li class="list-group-item">Name : Task1</li>
+                         <li class="list-group-item">Description : Wireframe </li>
+                         <li class="list-group-item">AssignedTo : Vidhya</li>
+                         <li class="list-group-item">Duedate : 06/08/2021</li>
+                         <li class="list-group-item">Status : Done</li>
+                       </ul>
+                       <div class="card-body">
+                         <a href="#" class="card-link">Card link</a>
+                         <a href="#" class="card-link">Another link</a>
+                       </div>
+                     </div>
+   
+                     <div class="card m-1" id="card2" style="width: 18rem;">
+                       <div class="card-body">
+                         <h5 class="card-title">Card-2</h5>
+                       </div>
+                       <ul class="list-group list-group-flush">
+                         <li class="list-group-item">Name : Task02</li>
+                         <li class="list-group-item">Description : Wireframe </li>
+                         <li class="list-group-item">AssignedTo : Seble</li>
+                         <li class="list-group-item">Duedate : 06/07/2021</li>
+                         <li class="list-group-item">Status : Done</li>
+                       </ul>
+                       <div class="card-body">
+                         <a href="#" class="card-link">Card link</a>
+                         <a href="#" class="card-link">Another link</a>
+                       </div>
+                     </div>
+                     <div class="card m-1" id="card3" style="width: 18rem;">
+                       <div class="card-body">
+                         <h5 class="card-title">Card-3</h5>
+                       </div>
+                       <ul class="list-group list-group-flush">
+                         <li class="list-group-item">Name : Task03</li>
+                         <li class="list-group-item">Description : Bootstrap </li>
+                         <li class="list-group-item">AssignedTo : Meron</li>
+                         <li class="list-group-item">Duedate : 06/08/2021</li>
+                         <li class="list-group-item">Status : Assigned</li>
+                       </ul>
+                       <div class="card-body">
+                         <a href="#" class="card-link">Card link</a>
+                         <a href="#" class="card-link">Another link</a>
+                       </div>
+                     </div>
+                     <div class="card m-1" id="card4" style="width: 18rem;">
+                       <div class="card-body">
+                         <h5 class="card-title">Card-4</h5>
+                       </div>
+                       <ul class="list-group list-group-flush">
+                         <li class="list-group-item">Name : Task04</li>
+                         <li class="list-group-item">Description : CSS</li>
+                         <li class="list-group-item">AssignedTo : Vidhya and seble</li>
+                         <li class="list-group-item">Duedate : 06/08/2021</li>
+                         <li class="list-group-item">Status : In Progress</li>
+                       </ul>
+                       <div class="card-body">
+                         <a href="#" class="card-link">Card link</a>
+                         <a href="#" class="card-link">Another link</a>
+                       </div>
+                     </div>
+                     <div class="card m-1" id="card5" style="width: 18rem;">
+                       <div class="card-body">
+                         <h5 class="card-title">Card-5</h5>
+                       </div>
+                       <ul class="list-group list-group-flush">
+                         <li class="list-group-item">Name : Task05</li>
+                         <li class="list-group-item">Description : Card Layout </li>
+                         <li class="list-group-item">AssignedTo : Meron</li>
+                         <li class="list-group-item">Duedate : 06/08/2021</li>
+                         <li class="list-group-item">Status : In progress</li>
+                       </ul>
+                       <div class="card-body">
+                         <a href="#" class="card-link">Card link</a>
+                         <a href="#" class="card-link">Another link</a>
+                       </div>
+                     </div>
+                     </div>
                 </body>
 
    </html>
