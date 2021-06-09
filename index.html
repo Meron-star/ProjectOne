@@ -18,10 +18,15 @@
         <title>To Do App</title>
    </head>
    <body>
-    <header>
-        <h2>To Do App</h2>
+     <div class="container">
+       <div class="row">
+         <div class="col text-center">
+          <header>
+              <h2>To Do App</h2>
         <hr>
     </header>
+       </div>
+      </div>
     <nav class="navbar-light bg-light navbar navbar-expand-sm">
         <a class="navbar-brand"><img src="./tick.png" alt="Gloria's Gardening Logo" height="30"></a>
         <!-- Add the <a> below: -->
@@ -45,71 +50,70 @@
       </ul>
     </div>
   </nav>
-  <div class="margin auto">
-    <form id="taskentry" class="border border-black  pr-4">
-      <div class="row">
-        <div class="col-4">
-        <label for="Name">Name</label>
+  <div class="row">
+    <!-- <form id="taskentry" class="border border-black  pr-4"> -->
+      <div class="col-6">
+      <div class="input-group mb-3">
+                <span class="input-group-text" id="inputGroup-sizing-default">Name</span>
+        <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
       </div>
-      <div class="col-8">
-        <input class="input" type="text" name="Name" id="Name">
-      </div>
-    </div> 
-        <br>
-           
+         </div>
+        </div> 
         <div class="row">
-          <div class="col-4">
-            <label for="Description">Description</label>
-          </div>
-          <div class="col-8">
-            <textarea name="Description" id="Description"></textarea>
-          </div>
-          </div>
-            <br>
-          
-        <div class="row">
-          <div class="col-4">
-            <label for="AssignedTo">Assigned To</label>
-          </div>
-          <div class="col-8">
-            <select name="AssignedTo" id="AssignedTo">
-                <option value="Meron">Meron</option>
-                <option value="Seble">Seble</option>
-                <option value="Lace">Lace</option>
-                <option value="Vtdhya">Vidhya</option>
-                </select>
-              </div>
-        </div>
-            <br>
-            <div class="row">
-              <div class="col-4">
-                <label for="DueDate">DueDate</label>
-              </div>
-              <div class="col-8">
-            <input type="date" id="DueDate" name="DueDate">
+          <!-- <form id="taskentry" class="border border-black  pr-4"> -->
+            <div class="col-6">
+            <div class="input-group mb-3">
+                      <span class="input-group-text" id="inputGroup-sizing-default">Description</span>
+              <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
             </div>
-          </div>
-            <br>
-                <div class="row">
-                  <div class="col-4">
-                    <label for="Status">Status</label>
+               </div>
+              </div> 
+                     
+              <div class="row">
+                <!-- <form id="taskentry" class="border border-black  pr-4"> -->
+                  <div class="col-6">
+                  <div class="input-group mb-3">
+                   <span class="input-group-text" id="inputGroup-sizing-default">Assigned To</span>
+                   <select class="form-select" aria-label="Default select example">
+                    <option selected>Open this select menu</option>
+                    <option value="Meron">Meron</option>
+                    <option value="Seble">Seble</option>
+                    <option value="Lace">Lace</option>
+                    <option value="Vidhya">Vidhya</option>
+                  </select>
                   </div>
-                  <div class="col-8">
-                    <select name="Status" id="Status">
-                        <option value="Assigned">Assigned</option>
+                     </div>
+                    </div> 
+
+                    <div class="row">
+                      <!-- <form id="taskentry" class="border border-black  pr-4"> -->
+                        <div class="col-6">
+                        <div class="input-group mb-3">
+                                  <span class="input-group-text" id="inputGroup-sizing-default">Due Date</span>
+                          <input type="date" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                        </div>
+                           </div>
+                          </div> 
+
+                          <div class="row">
+                            <!-- <form id="taskentry" class="border border-black  pr-4"> -->
+                              <div class="col-6">
+                              <div class="input-group mb-3">
+                               <span class="input-group-text" id="inputGroup-sizing-default">Status</span>
+                               <select class="form-select" aria-label="Default select example">
+                                <option selected>Open this select menu</option>
+                                <option value="Assigned">Assigned</option>
                         <option value="InProgress">InProgress</option>
                         <option value="Done">Done</option>
-                        </select>
-                      </div>
-                    </div>
-                    <br>
-                    <section>
+                              </select>
+                              </div>
+                                 </div>
+                                </div> 
+
+                                <section>
                         <input type="submit" value="Send">
                     </section>
-                    
-                  </form>
-                </div>
-                <br>
+                                 
                    <!-- Row with cards -->
 
                      <!-- Row with cards -->
@@ -191,7 +195,7 @@
                        </div>
                      </div>
                      </div>
-
+                    </div>
                 </body>
 
    </html>
