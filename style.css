@@ -1,33 +1,23 @@
-#taskentry{
+.fullcontainer{
     font-family: Helvetica;
-      }
-#card1{
+    background-color:#efe2ba;
+        }
+.cardgreen{
   font-family: Helvetica;
-  background-color: lightgreen;
-}
-#card1{
-    font-family: Helvetica;
-    background-color: greenyellow;
+  background-color: #c2cad0;
+  text-align: justify;
+  font-size: x-large;
   }
-    
-  #card2{
-    font-family: Helvetica;
-    background-color: greenyellow;
-  }
-    
-  #card3{
-    font-family: Helvetica;
-    background-color: greenyellow;
-  }
-    
-  #card4{
-    font-family: Helvetica;
-    background-color: greenyellow;
-  }
-  #card5{
-    font-family: Helvetica;
-    background-color: greenyellow;
-  }
+.cardimage{
+  
+ max-block-size: inherit;
+ }
+
+ .cardtitle
+ {
+  font-family: Helvetica;
+  font-size: xx-large;
+ }
 
  /* body {
     background-color : #484848;
@@ -42,4 +32,4 @@ form {
 
 .input {
   background-color: yellow-100;
-}
+}*/
