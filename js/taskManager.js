@@ -49,24 +49,28 @@ class TaskManager {
         const id = this.crurentId++;
         this.tasks.push({id : id, name, description, assignedTo, dueDate, status});
     }
+
+    //render method
   render(){
     let tasksHtmlList = [];
-    for(i = 0; i < this.tasks.length; i++){
-      let currentTask = tasksHtmlList[i];
+    for(let i = 0; i < this.tasks.length; i++){
+      let currentTask = this.tasks[i];
+      let date = new Date(currentTask.dueDate);
+      let formattedDate = date.toString();
+      let taskHtml = createTaskHtml(currentTask.id, currentTask.name, currentTask.description, currentTask.assinedTo, currentTask.dueDate , currentTask.status);
+      tasksHtmlList.push(taskHtml);
     }
     
-    let date = new Date().toString();
-    this.tasks.dueDate(date);
-    let formattedDate = '';
 
-    let taskHtml = reateTaskHtml(currentTask , formattedDate);
-
-    tasksHtmlList(taskHtml);
-
+        
+          
 
     for(let j = 0; j < this.tasks.length; j++){
-      let taskHtml = 'tasksHtmlList.join'
+      let tasksHtml = tasksHtmlList.join('');
+      cardDiv.innerHTML = tasksHtml;
     }
+    //cardDiv.innerHTML = tasksHtml;
+    
   }
 
   

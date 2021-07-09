@@ -6,10 +6,15 @@ const status = document.getElementById('status');
 const submit = document.getElementById('send');
 const cardDiv = document.getElementById('jsCard');
 
-// submit.addEventListener('click', function() {
-//    const task = new TaskManager();
-//     task.addTask(taskName.value, description.value, assignedTo.value, dueDate.value, status.value);
-//     console.log(task.tasks)
+
+//submit.addEventListener('click', )
+
+submit.addEventListener('click', function() {
+   const task = new TaskManager();
+   task.addTask(taskName.value, description.value, assignedTo.value, dueDate.value, status.value);
+   task.render();
+
+   //console.log(task.tasks)
 //     //console.log(dueDate.value);
 
 //     let newDiv = document.createElement("div");
@@ -49,7 +54,7 @@ const cardDiv = document.getElementById('jsCard');
 //     </div>`
 
 //     cardDiv.append(newDiv);
-// });
+ });
 
 const taskHtml = createTaskHtml('Momo', 'Make a Website', 'seble', '07/10/2021', 'Pending');
 
