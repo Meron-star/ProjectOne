@@ -51,20 +51,7 @@ const cardDiv = document.getElementById('jsCard');
 //     cardDiv.append(newDiv);
 // });
 
-const taskHtml = createTaskHtml('website', 'render', 'seble', '07/10/21');
+const taskHtml = createTaskHtml('Momo', 'Make a Website', 'seble', '07/10/2021', 'Pending');
+
 console.log(taskHtml);
-
-
-// const task = new TaskManager(0);
-// task.addTask('Laz', 'create a website', 'Momo', '7/10/2021');
-// // // task.addTask('Laz', 'create a website', 'Momo', '7/10/2021');
-//  console.log(task.tasks);
-
- 
-
-
-
-
-
-
 
