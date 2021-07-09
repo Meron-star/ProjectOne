@@ -51,12 +51,9 @@ submit.addEventListener('click', function() {
     cardDiv.append(newDiv);
 });
 
+const taskHtml = createTaskHtml('Momo', 'Make a Website', 'seble', '07/10/2021', 'Pending');
 
-
-
-
-
-
+console.log(taskHtml);
 
 /*
 const task = new TaskManager(0);
