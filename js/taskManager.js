@@ -1,5 +1,5 @@
 
-const createTaskHtml = (name, description, assignedTo, dueDate, status) => {
+const createTaskHtml = (id, name, description, assignedTo, dueDate, status) => {
 return `<div class="card col-lg-4 col-md-6 col-sm-12 px-0">
 <div class="row cardimage">
 <img
@@ -9,11 +9,11 @@ return `<div class="card col-lg-4 col-md-6 col-sm-12 px-0">
 />
 </div>
 <div class="card-header bg-secondary row justify-content-center">
-//   <h5 class="card-title cardtitle">${name}</h5>
+<h5 class="card-title cardtitle">${name}</h5>
 </div>
 <div class="card-body cardgreen row justify-content-center my-0 py-0">
 <ul class="list-group list-group-flush ">
-  <li class="list-group-item cardgreen border-0 " >${name}</li>
+  <li class="list-group-item cardgreen border-0 " >${id}</li>
   <li class="list-group-item cardgreen border-0  ">Description : ${description} </li>
   <li class="list-group-item cardgreen border-0  ">AssignedTo : ${assignedTo}</li>
   <li class="list-group-item cardgreen border-0 ">Due Date : ${dueDate}</li>
@@ -45,9 +45,17 @@ class TaskManager {
         this.tasks = [];
     }
 
-    addTask(name, description, assignedTo, dueDate, status = 'To Do') {
-        const id = this.crurentId++;
-        this.tasks.push({id : id, name, description, assignedTo, dueDate, status});
+    addTask(name, description, assignedTo, dueDate, status) {
+        //const id = this.crurentId++;
+        const task = {
+          id:this.crurentId++,
+          name:name,
+          description: description,
+          assignedTo: assignedTo,
+          dueDate:dueDate,
+          status:status
+        }
+        this.tasks.push(task);
     }
 
     //render method
@@ -57,7 +65,7 @@ class TaskManager {
       let currentTask = this.tasks[i];
       let date = new Date(currentTask.dueDate);
       let formattedDate = date.toString();
-      let taskHtml = createTaskHtml(currentTask.id, currentTask.name, currentTask.description, currentTask.assinedTo, currentTask.dueDate , currentTask.status);
+      let taskHtml = createTaskHtml(currentTask.id, currentTask.name, currentTask.description, currentTask.assignedTo, currentTask.dueDate , currentTask.status);
       tasksHtmlList.push(taskHtml);
     }
     

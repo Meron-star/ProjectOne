@@ -1,4 +1,6 @@
- const taskName = document.getElementById('name');
+ 
+const task = new TaskManager();
+const taskName = document.getElementById('name');
 const description = document.getElementById('description');
 const assignedTo = document.getElementById('select');
 const dueDate = document.getElementById('dueDate');
@@ -10,8 +12,8 @@ const cardDiv = document.getElementById('jsCard');
 //submit.addEventListener('click', )
 
 submit.addEventListener('click', function() {
-   const task = new TaskManager();
-   task.addTask(taskName.value, description.value, assignedTo.value, dueDate.value, status.value);
+    //task.addTask();
+  task.addTask(taskName.value, description.value, assignedTo.value, dueDate.value, status.value);
    task.render();
 
    //console.log(task.tasks)
@@ -56,7 +58,7 @@ submit.addEventListener('click', function() {
 //     cardDiv.append(newDiv);
  });
 
-const taskHtml = createTaskHtml('Momo', 'Make a Website', 'seble', '07/10/2021', 'Pending');
+// const taskHtml = createTaskHtml('Momo', 'Make a Website', 'seble', '07/10/2021', 'Pending');
 
-console.log(taskHtml);
+// console.log(taskHtml);
 
