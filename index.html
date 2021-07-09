@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+
+  <!-- meta settings -->
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=7">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+    integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="style.css">
+
+
+  <!-- title -->
+  <title>To Do App</title>
+</head>
+
+<body>
+  <div class="container-fluid fullcontainer">
+  <!--Navbar Component-->
+  <nav class="navbar navbar-expand-lg navbar-light">
+    <a class="navbar-brand" href="#"><img style="   width: 100px;" src="images/ok check Todo.png" alt="todo" /></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link mx-3" href="#">Home <span class="sr-only">(current)</span></a>
+        </li>
+
+
+        <li class="nav-item active">
+          <a class="nav-link mx-3" href="#">To do<span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link mx-3" href="#">Contact Us</a>
+        </li>
+        <li class="nav-item dropdown">
+
+
+
+        </li>
+
+      </ul>
+
+    </div>
+  </nav>
+
+
+  <!-- Jumbotron -->
+
+  <div class="jumbotron  jumbotron-fluid"
+    style="background:url('images/istockphoto-1153700372-612x612.jpg') no-repeat; background-size: cover;  background-position: center bottom;">
+    <div class="my-5 bg-transparent">
+      <h1 class="display-3 text-white text-center fw-bold">MSV To-Do</h1>
+
+   </div>
+  </div>
+  <!--Class container-->
+  <div class="container">
+   
+
+    <div class="row justify-content-center">
+      <!-- <form id="taskentry" class="border border-black  pr-4"> -->
+      <div class="col-md-6 col-sm-8">
+        <div class="input-group mb-3">
+          <span class="input-group-text" id="inputGroup-sizing-default">Name</span>
+          <input id='name' type="text" class="form-control" aria-label="Sizing example input"
+            aria-describedby="inputGroup-sizing-default">
+        </div>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <!-- <form id="taskentry" class="border border-black  pr-4"> -->
+      <div class="col-md-6 col-sm-8">
+        <div class="input-group mb-3">
+          <span class="input-group-text" id="inputGroup-sizing-default">Description</span>
+          <input id='description' type="text" class="form-control" aria-label="Sizing example input"
+            aria-describedby="inputGroup-sizing-default">
+        </div>
+      </div>
+    </div>
+
+    <div class="row justify-content-center">
+      <!-- <form id="taskentry" class="border border-black  pr-4"> -->
+      <div class="col-md-6 col-sm-8">
+        <div class="input-group mb-3">
+          <span class="input-group-text" id="inputGroup-sizing-default">Assigned To</span>
+          <select id='select' class="form-select" aria-label="Default select example">
+            <option selected>Open this select menu</option>
+            <option value="Meron">Meron</option>
+            <option value="Seble">Seble</option>
+            <option value="Lace">Lace</option>
+            <option value="Vidhya">Vidhya</option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <div class="row justify-content-center">
+      <!-- <form id="taskentry" class="border border-black  pr-4"> -->
+      <div class="col-md-6 col-sm-8">
+        <div class="input-group mb-3">
+          <span class="input-group-text" id="inputGroup-sizing-default">Due Date</span>
+          <input id='dueDate' type="date" class="form-control" aria-label="Sizing example input"
+            aria-describedby="inputGroup-sizing-default">
+        </div>
+      </div>
+    </div>
+ 
+    <div class="row justify-content-center">
+      <!-- <form id="taskentry" class="border border-black  pr-4"> -->
+      <div class="col-md-6 col-sm-8">
+        <div class="input-group mb-3">
+          <span class="input-group-text" id="inputGroup-sizing-default">Status</span>
+          <select id='status' class="form-select" aria-label="Default select example">
+            <option selected>Open this select menu</option>
+            <option value="Assigned">Assigned</option>
+            <option value="InProgress">InProgress</option>
+            <option value="Done">Done</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+          <button id='send' type="submit">Send</button>
+        </div>
+        </div>
+        <br>
+<div class = "container-fluid">
+  <div id='jsCard' class = "row justify-content-center ">
+     <!-- <div class="card col-lg-3 col-md-5 col-sm-8 mx-4 px-0">
+          <div class="row cardimage">
+          <img
+            src="../ProjectOne/images/istockphoto-1153700372-612x612.jpg"
+            class="card-img-top "
+            alt="..."
+          />
+        </div>
+          <div class="card-header bg-secondary row justify-content-center">
+            <h5 class="card-title cardtitle">Task 01</h5>
+          </div>
+          <div class="card-body cardgreen row justify-content-center my-0 py-0">
+          <ul class="list-group list-group-flush ">
+            <li class="list-group-item cardgreen border-0 " >Name : Task01</li>
+            <li class="list-group-item cardgreen border-0  ">Description : Wireframe </li>
+            <li class="list-group-item cardgreen border-0  ">AssignedTo : Vidhya</li>
+            <li class="list-group-item cardgreen border-0 ">Due Date : 06/08/2021</li>
+            <li class="list-group-item cardgreen border-0 ">Status : Done</li>
+          </ul>
+        </div>
+          <div class="card-footer bg-secondary row ">
+            <div class="col">
+            <input type="checkbox" class="btn-check " id="btn-check-1" checked autocomplete="off">
+            <label class="btn btn-light  " for="btn-check-1">Done</label>
+          </div>
+          <div class="col ">
+            <input type="checkbox" class="btn-check" id="btn-check-2" checked autocomplete="off">
+            <label class="btn btn-light" for="btn-check-2">Delete</label>
+          </div>
+          <a href="#" class="card-link text-left">Done</a> 
+          <a href="#" class="card-link text-left">Delete</a> 
+
+        </div>
+          </div>  -->
+       
+      </div>
+      </div>
+
+ <!-- Footer -->
+ <footer class="text-center">2021 To-do &copy;</footer>
+  <!-- Bootstrap's JavaScript Files -->
+
+
+
+
+  <!--Our linked scripts-->
+  <script src='./js/taskManager.js'></script>
+  <script src='./js/index.js'></script>
+ 
+
+
+
+
+
+  
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+    integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous">
+  </script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+    integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous">
+  </script>
+  
+  </div>
+</body>
+
+</html>
+    
