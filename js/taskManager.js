@@ -6,7 +6,7 @@ class TaskManager {
 
     addTask(name, description, assignedTo, dueDate, status = 'To Do') {
         const id = this.crurentId++;
-        this.tasks.push(id, name, description, assignedTo, dueDate, status);
+        this.tasks.push({id : id, name, description, assignedTo, dueDate, status});
     }
 
 

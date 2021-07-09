@@ -74,7 +74,7 @@
       <div class="col-md-6 col-sm-8">
         <div class="input-group mb-3">
           <span class="input-group-text" id="inputGroup-sizing-default">Name</span>
-          <input type="text" class="form-control" aria-label="Sizing example input"
+          <input id='name' type="text" class="form-control" aria-label="Sizing example input"
             aria-describedby="inputGroup-sizing-default">
         </div>
       </div>
@@ -84,7 +84,7 @@
       <div class="col-md-6 col-sm-8">
         <div class="input-group mb-3">
           <span class="input-group-text" id="inputGroup-sizing-default">Description</span>
-          <input type="text" class="form-control" aria-label="Sizing example input"
+          <input id='description' type="text" class="form-control" aria-label="Sizing example input"
             aria-describedby="inputGroup-sizing-default">
         </div>
       </div>
@@ -95,7 +95,7 @@
       <div class="col-md-6 col-sm-8">
         <div class="input-group mb-3">
           <span class="input-group-text" id="inputGroup-sizing-default">Assigned To</span>
-          <select class="form-select" aria-label="Default select example">
+          <select id='select' class="form-select" aria-label="Default select example">
             <option selected>Open this select menu</option>
             <option value="Meron">Meron</option>
             <option value="Seble">Seble</option>
@@ -111,7 +111,7 @@
       <div class="col-md-6 col-sm-8">
         <div class="input-group mb-3">
           <span class="input-group-text" id="inputGroup-sizing-default">Due Date</span>
-          <input type="date" class="form-control" aria-label="Sizing example input"
+          <input id='dueDate' type="date" class="form-control" aria-label="Sizing example input"
             aria-describedby="inputGroup-sizing-default">
         </div>
       </div>
@@ -122,7 +122,7 @@
       <div class="col-md-6 col-sm-8">
         <div class="input-group mb-3">
           <span class="input-group-text" id="inputGroup-sizing-default">Status</span>
-          <select class="form-select" aria-label="Default select example">
+          <select id='status' class="form-select" aria-label="Default select example">
             <option selected>Open this select menu</option>
             <option value="Assigned">Assigned</option>
             <option value="InProgress">InProgress</option>
@@ -132,13 +132,13 @@
       </div>
     </div>
     <div class="row justify-content-center">
-          <input type="submit" value="Send">
+          <button id='send' type="submit">Send</button>
         </div>
         </div>
         <br>
 <div class = "container-fluid">
-  <div class = "row justify-content-center ">
-        <div class="card col-lg-3 col-md-5 col-sm-8 mx-4 px-0">
+  <div id='jsCard' class = "row justify-content-center ">
+     <!-- <div class="card col-lg-3 col-md-5 col-sm-8 mx-4 px-0">
           <div class="row cardimage">
           <img
             src="../ProjectOne/images/istockphoto-1153700372-612x612.jpg"
@@ -167,145 +167,12 @@
             <input type="checkbox" class="btn-check" id="btn-check-2" checked autocomplete="off">
             <label class="btn btn-light" for="btn-check-2">Delete</label>
           </div>
-           <!-- <a href="#" class="card-link text-left">Done</a> -->
-           <!-- <a href="#" class="card-link text-left">Delete</a> -->
-          </div>
-          </div>
-        <div class="card col-lg-3 col-md-5 col-sm-8 mx-4 px-0">
-          <div class="row cardimage">
-          <img
-            src="../ProjectOne/images/istockphoto-1153700372-612x612.jpg"
-            class="card-img-top cardimage "
-            alt="..."
-          />
-        </div>
-          <div class="card-header bg-secondary row justify-content-center  ">
-            <h5 class="card-title cardtitle">Task 02</h5>
-          </div>
-          <div class="card-body cardgreen row justify-content-center  my-0 py-0">
-          <ul class="list-group list-group-flush">
-            <li class="list-group-item cardgreen border-0">Name : Task02</li>
-            <li class="list-group-item cardgreen border-0">Description : Wireframe </li>
-            <li class="list-group-item cardgreen border-0">AssignedTo : Seble</li>
-            <li class="list-group-item cardgreen border-0">Due Date : 06/07/2021</li>
-            <li class="list-group-item cardgreen border-0">Status : Done</li>
-          </ul>
-        </div>
-          <div class="card-footer bg-secondary row ">
-            <div class="col">
-            <input type="checkbox" class="btn-check " id="btn-check-1" checked autocomplete="off">
-            <label class="btn btn-light  " for="btn-check-1">Done</label>
-          </div>
-          <div class="col ">
-            <input type="checkbox" class="btn-check" id="btn-check-2" checked autocomplete="off">
-            <label class="btn btn-light" for="btn-check-2">Delete</label>
-          </div>
-           <!-- <a href="#" class="card-link text-left">Done</a> -->
-           <!-- <a href="#" class="card-link text-left">Delete</a> -->
-          </div>
-          </div>
+          <a href="#" class="card-link text-left">Done</a> 
+          <a href="#" class="card-link text-left">Delete</a> 
 
-<div class="card col-lg-3 col-md-5 col-sm-8 mx-4 px-0">
-  <div class="row cardimage">
-          <img
-            src="../ProjectOne/images/istockphoto-1153700372-612x612.jpg"
-            class="card-img-top cardimage "
-            alt="..."
-          />
-  </div>
-          <div class="card-header bg-secondary row justify-content-center">
-            <h5 class="card-title cardtitle ">Task 03</h5>
-          </div>
-          <div class="card-body cardgreen row justify-content-center  my-0 py-0">
-          <ul class="list-group list-group-flush">
-            <li class="list-group-item cardgreen border-0">Name : Task03</li>
-          <li class="list-group-item cardgreen border-0">Description : Bootstrap </li>
-          <li class="list-group-item cardgreen border-0">AssignedTo : Meron</li>
-          <li class="list-group-item cardgreen border-0">Due Date : 06/08/2021</li>
-          <li class="list-group-item cardgreen border-0">Status : Assigned</li>
-          </ul>
         </div>
-          <div class="card-footer bg-secondary row ">
-            <div class="col">
-            <input type="checkbox" class="btn-check " id="btn-check-1" checked autocomplete="off">
-            <label class="btn btn-light  " for="btn-check-1">Done</label>
-          </div>
-          <div class="col ">
-            <input type="checkbox" class="btn-check" id="btn-check-2" checked autocomplete="off">
-            <label class="btn btn-light" for="btn-check-2">Delete</label>
-          </div>
-           <!-- <a href="#" class="card-link text-left">Done</a> -->
-           <!-- <a href="#" class="card-link text-left">Delete</a> -->
-          </div>
-          </div>
-
-<div class="card col-lg-3 col-md-5 col-sm-8 mx-4 px-0">
-  <div class="row cardimage">
-          <img
-            src="../ProjectOne/images/istockphoto-1153700372-612x612.jpg"
-            class="card-img-top cardimage "
-            alt="..."
-          />
-</div>
-          <div class="card-header bg-secondary row justify-content-center">
-            <h5 class="card-title cardtitle">Task 04</h5>
-          </div>
-          <div class="card-body cardgreen row justify-content-center  my-0 py-0">
-          <ul class="list-group list-group-flush">
-            <li class="list-group-item cardgreen border-0">Name : Task04</li>
-            <li class="list-group-item cardgreen border-0">Description : CSS</li>
-            <li class="list-group-item cardgreen border-0">AssignedTo : Vidhya and seble</li>
-            <li class="list-group-item cardgreen border-0">Due Date : 06/08/2021</li>
-            <li class="list-group-item cardgreen border-0">Status : In Progress</li>
-          </ul>
-        </div>
-        <div class="card-footer bg-secondary row ">
-          <div class="col">
-          <input type="checkbox" class="btn-check " id="btn-check-1" checked autocomplete="off">
-          <label class="btn btn-light  " for="btn-check-1">Done</label>
-        </div>
-        <div class="col ">
-          <input type="checkbox" class="btn-check" id="btn-check-2" checked autocomplete="off">
-          <label class="btn btn-light" for="btn-check-2">Delete</label>
-        </div>
-         <!-- <a href="#" class="card-link text-left">Done</a> -->
-         <!-- <a href="#" class="card-link text-left">Delete</a> -->
-        </div>
-        </div>
-
-<div class="card col-lg-3 col-md-5 col-sm-8 mx-4 px-0" >
-  <div class="row cardimage">
-          <img
-            src="../ProjectOne/images/istockphoto-1153700372-612x612.jpg"
-            class="card-img-top cardimage "
-            alt="..."
-          />
-</div>
-          <div class="card-header bg-secondary row justify-content-center">
-            <h5 class="card-title cardtitle">Task 05</h5>
-          </div>
-          <div class="card-body cardgreen row justify-content-center  my-0 py-0">
-          <ul class="list-group list-group-flush">
-            <li class="list-group-item cardgreen border-0">Name : Task05</li>
-            <li class="list-group-item cardgreen border-0">Description : Card Layout </li>
-            <li class="list-group-item cardgreen border-0">AssignedTo : Meron</li>
-            <li class="list-group-item cardgreen border-0">Due Date : 06/08/2021</li>
-            <li class="list-group-item cardgreen border-0">Status : In progress</li>
-          </ul>
-        </div>
-        <div class="card-footer bg-secondary row ">
-          <div class="col">
-          <input type="checkbox" class="btn-check " id="btn-check-1" checked autocomplete="off">
-          <label class="btn btn-light  " for="btn-check-1">Done</label>
-        </div>
-        <div class="col ">
-          <input type="checkbox" class="btn-check" id="btn-check-2" checked autocomplete="off">
-          <label class="btn btn-light" for="btn-check-2">Delete</label>
-        </div>
-         <!-- <a href="#" class="card-link text-left">Done</a> -->
-         <!-- <a href="#" class="card-link text-left">Delete</a> -->
-        </div>
-        </div>
+          </div>  -->
+       
       </div>
       </div>
 
@@ -316,7 +183,7 @@
 
 
 
-  
+  <!--Our linked scripts-->
   <script src='./js/taskManager.js'></script>
   <script src='./js/index.js'></script>
  
