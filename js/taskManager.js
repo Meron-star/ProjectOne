@@ -50,6 +50,30 @@ class TaskManager {
         this.tasks.push({id : id, name, description, assignedTo, dueDate, status});
     }
 
+    //render method
+  render(){
+    let tasksHtmlList = [];
+    for(let i = 0; i < this.tasks.length; i++){
+      let currentTask = this.tasks[i];
+      let date = new Date(currentTask.dueDate);
+      let formattedDate = date.toString();
+      let taskHtml = createTaskHtml(currentTask.id, currentTask.name, currentTask.description, currentTask.assinedTo, currentTask.dueDate , currentTask.status);
+      tasksHtmlList.push(taskHtml);
+    }
+    
+
+        
+          
+
+    for(let j = 0; j < this.tasks.length; j++){
+      let tasksHtml = tasksHtmlList.join('');
+      cardDiv.innerHTML = tasksHtml;
+    }
+    //cardDiv.innerHTML = tasksHtml;
+    
+  }
+
+  
 
 };
 
