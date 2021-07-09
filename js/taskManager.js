@@ -65,25 +65,30 @@ class TaskManager {
       let currentTask = this.tasks[i];
       let date = new Date(currentTask.dueDate);
       let formattedDate = date.toString();
-      let taskHtml = createTaskHtml(currentTask.id, currentTask.name, currentTask.description, currentTask.assignedTo, currentTask.dueDate , currentTask.status);
+        
+      
+      let taskHtml = createTaskHtml(currentTask.id, currentTask.name, currentTask.description, currentTask.assignedTo, formattedDate , currentTask.status);
       tasksHtmlList.push(taskHtml);
     }
-    
-
-        
-          
-
+     
     for(let j = 0; j < this.tasks.length; j++){
       let tasksHtml = tasksHtmlList.join('');
       cardDiv.innerHTML = tasksHtml;
     }
     //cardDiv.innerHTML = tasksHtml;
-    
   }
+};
+       
+         
+    
+
+        
+          
+
+    
 
   
 
-};
 
 
 
