@@ -20,11 +20,12 @@ return `<div class="card col-lg-4 col-md-6 col-sm-12 px-0">
   <li class="list-group-item cardgreen border-0 ">Status : ${status}</li>
 </ul>
 </div>
-<div class="card-footer bg-secondary row ">
+<div class="card-footer  'done-button' bg-secondary row ">
   <div class="col">
   <input type="checkbox" class="btn-check " id="btn-check-1" checked autocomplete="off">
   <label class="btn btn-light  " for="btn-check-1">Done</label>
 </div>
+
 <div class="col ">
   <input type="checkbox" class="btn-check" id="btn-check-2" checked autocomplete="off">
   <label class="btn btn-light" for="btn-check-2">Delete</label>
@@ -57,6 +58,7 @@ class TaskManager {
         }
         this.tasks.push(task);
     }
+ 
 
     //render method
   render(){
@@ -65,6 +67,7 @@ class TaskManager {
       let currentTask = this.tasks[i];
       let date = new Date(currentTask.dueDate);
       let formattedDate = date.toString();
+      
         
       
       let taskHtml = createTaskHtml(currentTask.id, currentTask.name, currentTask.description, currentTask.assignedTo, formattedDate , currentTask.status);
@@ -72,7 +75,7 @@ class TaskManager {
     }
      
     for(let j = 0; j < this.tasks.length; j++){
-      let tasksHtml = tasksHtmlList.join('');
+      let tasksHtml = tasksHtmlList.join('\n');
       cardDiv.innerHTML = tasksHtml;
     }
     //cardDiv.innerHTML = tasksHtml;

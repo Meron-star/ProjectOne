@@ -66,19 +66,26 @@
    </div>
   </div>
   <!--Class container-->
-  <div class="container">
+  <div class="container" id = 'addTask'>
    
 
     <div class="row justify-content-center">
       <!-- <form id="taskentry" class="border border-black  pr-4"> -->
-      <div class="col-md-6 col-sm-8">
+      <div class="col-md-6 col-sm-8 d-block">
         <div class="input-group mb-3">
           <span class="input-group-text" id="inputGroup-sizing-default">Name</span>
-          <input id='name' type="text" class="form-control" aria-label="Sizing example input"
-            aria-describedby="inputGroup-sizing-default">
+          <input id='name' type="text" class="form-control"  aria-label="Sizing example input"
+          aria-describedby="inputGroup-sizing-default" required>
+          
+            
         </div>
       </div>
+      <div id='alertMsg' class="alert alert-danger  col-md-6 col-sm-8 d-none" role="alert">
+        Please fill out the name field!
+      </div>
+
     </div>
+    
     <div class="row justify-content-center">
       <!-- <form id="taskentry" class="border border-black  pr-4"> -->
       <div class="col-md-6 col-sm-8">
@@ -87,6 +94,9 @@
           <input id='description' type="text" class="form-control" aria-label="Sizing example input"
             aria-describedby="inputGroup-sizing-default">
         </div>
+      </div>
+      <div id='alertDesc' class="alert alert-danger  col-md-6 col-sm-8 d-none" role="alert">
+        Please fill out the description field!
       </div>
     </div>
 
@@ -99,10 +109,13 @@
             <option selected>Open this select menu</option>
             <option value="Meron">Meron</option>
             <option value="Seble">Seble</option>
-            <option value="Lace">Lace</option>
+            <option value="Lace">Mouhamed</option>
             <option value="Vidhya">Vidhya</option>
           </select>
         </div>
+      </div>
+      <div id='alertAssigned' class="alert alert-danger  col-md-6 col-sm-8 d-none" role="alert">
+        Please assign to employee!
       </div>
     </div>
 
@@ -115,6 +128,9 @@
             aria-describedby="inputGroup-sizing-default">
         </div>
       </div>
+      <div id='alertdueDate' class="alert alert-danger  col-md-6 col-sm-8 d-none" role="alert">
+        Please put dueDate!
+      </div>
     </div>
  
     <div class="row justify-content-center">
@@ -126,9 +142,13 @@
             <option selected>Open this select menu</option>
             <option value="Assigned">Assigned</option>
             <option value="InProgress">InProgress</option>
-            <option value="Done">Done</option>
+            <!--<option value="Done">Done</option>-->
+            <button id='done-button'>Mark As done</button>
           </select>
         </div>
+      </div>
+      <div id='alertStatus' class="alert alert-danger  col-md-6 col-sm-8 d-none" role="alert">
+        Please select status!
       </div>
     </div>
     <div class="row justify-content-center">
@@ -138,40 +158,7 @@
         <br>
 <div class = "container-fluid">
   <div id='jsCard' class = "row justify-content-center ">
-     <!-- <div class="card col-lg-3 col-md-5 col-sm-8 mx-4 px-0">
-          <div class="row cardimage">
-          <img
-            src="../ProjectOne/images/istockphoto-1153700372-612x612.jpg"
-            class="card-img-top "
-            alt="..."
-          />
-        </div>
-          <div class="card-header bg-secondary row justify-content-center">
-            <h5 class="card-title cardtitle">Task 01</h5>
-          </div>
-          <div class="card-body cardgreen row justify-content-center my-0 py-0">
-          <ul class="list-group list-group-flush ">
-            <li class="list-group-item cardgreen border-0 " >Name : Task01</li>
-            <li class="list-group-item cardgreen border-0  ">Description : Wireframe </li>
-            <li class="list-group-item cardgreen border-0  ">AssignedTo : Vidhya</li>
-            <li class="list-group-item cardgreen border-0 ">Due Date : 06/08/2021</li>
-            <li class="list-group-item cardgreen border-0 ">Status : Done</li>
-          </ul>
-        </div>
-          <div class="card-footer bg-secondary row ">
-            <div class="col">
-            <input type="checkbox" class="btn-check " id="btn-check-1" checked autocomplete="off">
-            <label class="btn btn-light  " for="btn-check-1">Done</label>
-          </div>
-          <div class="col ">
-            <input type="checkbox" class="btn-check" id="btn-check-2" checked autocomplete="off">
-            <label class="btn btn-light" for="btn-check-2">Delete</label>
-          </div>
-          <a href="#" class="card-link text-left">Done</a> 
-          <a href="#" class="card-link text-left">Delete</a> 
-
-        </div>
-          </div>  -->
+   
        
       </div>
       </div>
