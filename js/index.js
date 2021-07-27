@@ -1,10 +1,20 @@
- 
+
+ // instantiating taskManager
 const taskManager = new TaskManager(0);
+// call load function
+taskManager.load();
+// render
+taskManager.render();
+
+ 
+
 const taskName = document.getElementById('name');
 const description = document.getElementById('description');
 const assignedTo = document.getElementById('select');
 const dueDate = document.getElementById('dueDate');
-//const status = document.getElementById('status');
+
+
+
 const submit = document.getElementById('send');
 const cardDiv = document.getElementById('jsCard');
 
@@ -14,7 +24,9 @@ const cardDiv = document.getElementById('jsCard');
 
 
 
+
  // alert message access variables 
+
 const nameAlert = document.getElementById('alertMsg');
 const descAlert = document.getElementById('alertDesc');
 const assignedToAlert = document.getElementById('alertAssigned');
@@ -33,8 +45,9 @@ const validFormFieldInput = () => {
   console.log('assign :' + assignedToVal)
   let dueDateVal = dueDate.value;
   console.log('dueDate :' + dueDateVal )
-  //let statusVal = status.value;
-  //console.log('status :' + statusVal );
+
+ 
+
 
  if(nameTaskVal === '' ){
 
@@ -62,15 +75,8 @@ const validFormFieldInput = () => {
     dueDateAlert.classList.add('d-none');
   }, 3000);
  } 
-//  else if(statusVal === '' || statusVal === 'Open this select menu') {
 
-//    statusAlert.classList.remove('d-none');
-   
-//    setTimeout(function(){
-//     statusAlert.classList.add('d-none');
-//   }, 3000);
 
-//  } 
  else {
 
    return true;
@@ -79,8 +85,12 @@ const validFormFieldInput = () => {
 }   
 
 
+
+
+
+// add task 
  
-  
+
 submit.addEventListener('click', function() {
   // call form input validation function 
  let valid = validFormFieldInput();
@@ -92,6 +102,44 @@ submit.addEventListener('click', function() {
   } else {
     return true;
   }
+
+  
+});
+  
+  
+
+// Select task list 
+const taskList = document.querySelector('#jsCard')
+taskList.addEventListener('click', (event) => { 
+
+  if(event.target.classList.contains('done-button') ){
+
+    // get parent task 
+  const parentTask = event.target.parentElement.parentElement;
+  // get the taskId of the parent task
+  const taskId = Number(parentTask.dataset.taskId);
+  //get the task from the TaskManager using the taskId
+  const task = taskManager.getTaskById(taskId);
+  //update the task status to 'DONE'
+  task.status = 'DONE';
+  //Render the new tasks 
+  taskManager.save();
+  taskManager.render();
+  };
+
+});
+
+
+
+
+
+
+
+
+
+
+  
+
   
 });
   
@@ -113,6 +161,7 @@ taskList.addEventListener('click', (event) => {
   //Render the new tasks 
   taskManager.render();
   };
+
 
 });
 
