@@ -1,6 +1,6 @@
 
 const createTaskHtml = (id, name, description, assignedTo, dueDate, status) => {
-return `<div class="card col-lg-4 col-md-6 col-sm-12 px-0">
+let html = `<div data-task-id=${id} class="card col-lg-4 col-md-6 col-sm-12 px-0">
 <div class="row cardimage">
 <img
   src="../ProjectOne/images/istockphoto-1153700372-612x612.jpg"
@@ -17,16 +17,19 @@ return `<div class="card col-lg-4 col-md-6 col-sm-12 px-0">
   <li class="list-group-item cardgreen border-0  ">Description : ${description} </li>
   <li class="list-group-item cardgreen border-0  ">AssignedTo : ${assignedTo}</li>
   <li class="list-group-item cardgreen border-0 ">Due Date : ${dueDate}</li>
-  <li class="list-group-item cardgreen border-0 ">Status : ${status}</li>
+  <li class="badge list-group-item cardgreen border-0 ${status === 'TODO'? 'badge-danger': 'badge-success'} ">Status:${status}</li>
 </ul>
 </div>
-<div class="card-footer  'done-button' bg-secondary row ">
-  <div class="col">
-  <input type="checkbox" class="btn-check " id="btn-check-1" checked autocomplete="off">
-  <label class="btn btn-light  " for="btn-check-1">Done</label>
+
+<div class="d-flex w-100 justify-content-end">
+  <button class="btn btn-info done-button ${status === 'TODO' ? 'visible' : 'invisible'}" type="button">Mark As Done</button>
 </div>
 
-<div class="col ">
+
+
+  
+
+<div class="col">
   <input type="checkbox" class="btn-check" id="btn-check-2" checked autocomplete="off">
   <label class="btn btn-light" for="btn-check-2">Delete</label>
 </div>
@@ -34,7 +37,7 @@ return `<div class="card col-lg-4 col-md-6 col-sm-12 px-0">
  <!-- <a href="#" class="card-link text-left">Delete</a> -->
 </div>
 </div>`;
-
+  return html;
 };
 
 
@@ -46,7 +49,7 @@ class TaskManager {
         this.tasks = [];
     }
 
-    addTask(name, description, assignedTo, dueDate, status) {
+    addTask(name, description, assignedTo, dueDate) {
         //const id = this.crurentId++;
         const task = {
           id:this.crurentId++,
@@ -54,9 +57,25 @@ class TaskManager {
           description: description,
           assignedTo: assignedTo,
           dueDate:dueDate,
-          status:status
+          status:'TODO'
         }
         this.tasks.push(task);
+    }
+
+    getTaskById(taskId){
+      //create a variable to store the found task
+      let foundTask;
+      // loop over the tasks and find the task with the id passed as a parameter
+      for(let i = 0 ; i < this.tasks.length; i++){
+        // get the current task in the loop 
+        const task = this.tasks[i];
+        // check if its the right task by comparing the task's id to the id passed as a parameter
+        if(task.id === taskId){
+          // store task in the found task variable
+          foundTask = task;
+        }
+      }
+      return foundTask;
     }
  
 
@@ -66,19 +85,19 @@ class TaskManager {
     for(let i = 0; i < this.tasks.length; i++){
       let currentTask = this.tasks[i];
       let date = new Date(currentTask.dueDate);
-      let formattedDate = date.toString();
-      
-        
-      
+      //let formattedDate = date.toString();
+     const formattedDate = date.getDate() + '/' + (date.getMonth() + 1) + '/' + date.getFullYear();
+      // Pass the task id as a parameter 
       let taskHtml = createTaskHtml(currentTask.id, currentTask.name, currentTask.description, currentTask.assignedTo, formattedDate , currentTask.status);
       tasksHtmlList.push(taskHtml);
     }
      
-    for(let j = 0; j < this.tasks.length; j++){
-      let tasksHtml = tasksHtmlList.join('\n');
-      cardDiv.innerHTML = tasksHtml;
-    }
-    //cardDiv.innerHTML = tasksHtml;
+   
+      const  tasksHtml = tasksHtmlList.join('\n');
+      const taskList = document.querySelector('#jsCard');
+      taskList.innerHTML = tasksHtml;
+    
+  
   }
 };
        

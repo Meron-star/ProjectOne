@@ -135,44 +135,49 @@
  
     <div class="row justify-content-center">
       <!-- <form id="taskentry" class="border border-black  pr-4"> -->
-      <div class="col-md-6 col-sm-8">
+      <!--  <div class="col-md-6 col-sm-8">
         <div class="input-group mb-3">
           <span class="input-group-text" id="inputGroup-sizing-default">Status</span>
-          <select id='status' class="form-select" aria-label="Default select example">
-            <option selected>Open this select menu</option>
+          <input id='status' class="form-select" aria-label="Default select example">
+          <option selected>Open this select menu</option>
             <option value="Assigned">Assigned</option>
             <option value="InProgress">InProgress</option>
-            <!--<option value="Done">Done</option>-->
-            <button id='done-button'>Mark As done</button>
+            <option value="Done">Done</option> 
           </select>
         </div>
-      </div>
+      </div>-->
       <div id='alertStatus' class="alert alert-danger  col-md-6 col-sm-8 d-none" role="alert">
         Please select status!
       </div>
     </div>
+           
+    
+    
     <div class="row justify-content-center">
-          <button id='send' type="submit">Send</button>
-        </div>
-        </div>
-        <br>
-<div class = "container-fluid">
-  <div id='jsCard' class = "row justify-content-center ">
+      <button id='send' type="submit">Send</button>
+    </div>
+  </div>
+  <br>
+  <small>Tasks</small>
+  <div class = "container-fluid">
+    
+    <div id='jsCard' class = "row justify-content-center ">
+    </div>
+  </div>
+  
+  <!-- Footer -->
+  <footer class="text-center">2021 To-do &copy;</footer>
+   <!-- Bootstrap's JavaScript Files -->
+ 
+   <!--Our linked scripts-->
+   <script src='./js/taskManager.js'></script>
+   <script src='./js/index.js'></script>
    
-       
-      </div>
-      </div>
-
- <!-- Footer -->
- <footer class="text-center">2021 To-do &copy;</footer>
-  <!-- Bootstrap's JavaScript Files -->
+  
 
 
 
 
-  <!--Our linked scripts-->
-  <script src='./js/taskManager.js'></script>
-  <script src='./js/index.js'></script>
  
 
 
