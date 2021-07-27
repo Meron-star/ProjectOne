@@ -25,10 +25,6 @@ let html = `<div data-task-id=${id} class="card col-lg-4 col-md-6 col-sm-12 px-0
   <button class="btn btn-info done-button ${status === 'TODO' ? 'visible' : 'invisible'}" type="button">Mark As Done</button>
 </div>
 
-
-
-  
-
 <div class="col">
   <input type="checkbox" class="btn-check" id="btn-check-2" checked autocomplete="off">
   <label class="btn btn-light" for="btn-check-2">Delete</label>
@@ -39,8 +35,6 @@ let html = `<div data-task-id=${id} class="card col-lg-4 col-md-6 col-sm-12 px-0
 </div>`;
   return html;
 };
-
-
 
 
 class TaskManager {
@@ -99,34 +93,29 @@ class TaskManager {
     
   
   }
+
+  save(){
+    let tasksJson = JSON.stringify(this.tasks);
+    localStorage.setItem('tasks', tasksJson);
+    let currentId = JSON.stringify(this.crurentId);
+    localStorage.setItem('currentId', currentId);
+  }
+
+  load(){
+    // check if any tasks are saved in localStorage
+    if(localStorage.getItem('tasks')){
+      // get the JSON string of tasks in localStorage
+     let tasksJson =  localStorage.getItem('tasks');
+     // Convert it to an array and store it in our TaskManager
+      this.tasks = JSON.parse(tasksJson);
+    }
+    // check if the currentId is saved in loaclStorage
+    if(localStorage.getItem('currentId')){
+      // get the JSON string currentId in localStorage
+     let currentId = localStorage.getItem('currentId');
+     // convert currentId to a number and store it in our TaskManager 
+      this.currentId = JSON.parse(currentId)
+    }
+  }
 };
-       
-         
-    
-
-        
-          
-
-    
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
