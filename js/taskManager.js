@@ -25,6 +25,7 @@ let html = `<div data-task-id=${id} class="card col-lg-4 col-md-6 col-sm-12 px-0
   <button class="btn btn-info done-button ${status === 'TODO' ? 'visible' : 'invisible'}" type="button">Mark As Done</button>
 </div>
 
+
 <div class="col">
   <input type="checkbox" class="btn-check" id="btn-check-2" checked autocomplete="off">
   <label class="btn btn-light" for="btn-check-2">Delete</label>
@@ -90,6 +91,14 @@ class TaskManager {
       const  tasksHtml = tasksHtmlList.join('\n');
       const taskList = document.querySelector('#jsCard');
       taskList.innerHTML = tasksHtml;
+
+    
+  
+  }
+};
+       
+         
+
     
   
   }
