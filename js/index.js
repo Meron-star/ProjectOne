@@ -12,20 +12,11 @@ const taskName = document.getElementById('name');
 const description = document.getElementById('description');
 const assignedTo = document.getElementById('select');
 const dueDate = document.getElementById('dueDate');
-
-
-
 const submit = document.getElementById('send');
 const cardDiv = document.getElementById('jsCard');
 
 
-
-
-
-
-
-
- // alert message access variables 
+// alert message access variables 
 
 const nameAlert = document.getElementById('alertMsg');
 const descAlert = document.getElementById('alertDesc');
@@ -45,9 +36,6 @@ const validFormFieldInput = () => {
   console.log('assign :' + assignedToVal)
   let dueDateVal = dueDate.value;
   console.log('dueDate :' + dueDateVal )
-
- 
-
 
  if(nameTaskVal === '' ){
 
@@ -85,9 +73,6 @@ const validFormFieldInput = () => {
 }   
 
 
-
-
-
 // add task 
  
 
@@ -105,8 +90,7 @@ submit.addEventListener('click', function() {
 
   
 });
-  
-  
+
 
 // Select task list 
 const taskList = document.querySelector('#jsCard')
@@ -130,51 +114,24 @@ taskList.addEventListener('click', (event) => {
 });
 
 
-
-
-
-
-
-
-
-
-  
-
-  
-});
-  
-
 // Select task list 
-const taskList = document.querySelector('#jsCard')
+//const taskList = document.querySelector('#jsCard')
 taskList.addEventListener('click', (event) => { 
 
-  if(event.target.classList.contains('done-button') ){
+if(event.target.classList.contains('done-button') ){
 
-    // get parent task 
-  const parentTask = event.target.parentElement.parentElement;
-  // get the taskId of the parent task
-  const taskId = Number(parentTask.dataset.taskId);
-  //get the task from the TaskManager using the taskId
-  const task = taskManager.getTaskById(taskId);
-  //update the task status to 'DONE'
-  task.status = 'DONE';
-  //Render the new tasks 
-  taskManager.render();
-  };
+  // get parent task 
+const parentTask = event.target.parentElement.parentElement;
+// get the taskId of the parent task
+const taskId = Number(parentTask.dataset.taskId);
+//get the task from the TaskManager using the taskId
+const task = taskManager.getTaskById(taskId);
+//update the task status to 'DONE'
+task.status = 'DONE';
+//Render the new tasks 
+taskManager.render();
+};
 
 
 });
-
   
-  
-
-
-  
- 
- 
- 
- 
-  
-
-
-
