@@ -111,27 +111,25 @@ taskList.addEventListener('click', (event) => {
   taskManager.render();
   };
 
-});
+  if(event.target.classList.contains('delete-button')){
+    // Get the parent task
 
+    let parentTask = event.target.parentElement.parentElement;
+    // Get the taskId of the parent task
+    let taskId = Number(parentTask.dataset.taskId);
+    //delete the task 
+    taskManager.deleteTask(taskId);
+    // save the task to local storage
+    taskManager.save();
+    // Render the tasks 
 
-// Select task list 
-//const taskList = document.querySelector('#jsCard')
-taskList.addEventListener('click', (event) => { 
+    taskManager.render();
 
-if(event.target.classList.contains('done-button') ){
-
-  // get parent task 
-const parentTask = event.target.parentElement.parentElement;
-// get the taskId of the parent task
-const taskId = Number(parentTask.dataset.taskId);
-//get the task from the TaskManager using the taskId
-const task = taskManager.getTaskById(taskId);
-//update the task status to 'DONE'
-task.status = 'DONE';
-//Render the new tasks 
-taskManager.render();
-};
-
+  }
 
 });
+
+
+
+
   

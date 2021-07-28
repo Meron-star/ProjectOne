@@ -27,8 +27,8 @@ let html = `<div data-task-id=${id} class="card col-lg-4 col-md-6 col-sm-12 px-0
 
 
 <div class="col">
-  <input type="checkbox" class="btn-check" id="btn-check-2" checked autocomplete="off">
-  <label class="btn btn-light" for="btn-check-2">Delete</label>
+  <button type="checkbox" class="btn btn-light delete-button" id="btn-check-2" >Delete</button>
+ 
 </div>
  <!-- <a href="#" class="card-link text-left">Done</a> -->
  <!-- <a href="#" class="card-link text-left">Delete</a> -->
@@ -56,6 +56,27 @@ class TaskManager {
         }
         this.tasks.push(task);
     }
+// Create the Delete task method 
+    deleteTask(taskId){
+      // Create an empty array and store it in a new variable, new tasks 
+      let newTasks = [];
+      //loop over the tasks 
+      for(let i = 0; i < this.tasks.length; i++){
+        // get the current task in the loop
+        let task = this.tasks[i];
+        // check if the task id is not the task id passed as a parameter 
+        if(task.id !== taskId){
+
+          // push the task to the newTasks array
+          newTasks.push(task);
+        }
+
+        
+      }
+      this.tasks = newTasks;
+    }
+
+
 
     getTaskById(taskId){
       //create a variable to store the found task
@@ -118,6 +139,7 @@ class TaskManager {
       this.currentId = JSON.parse(currentId)
     }
   }
+
 };
        
          
