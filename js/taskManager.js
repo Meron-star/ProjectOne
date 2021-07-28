@@ -95,14 +95,6 @@ class TaskManager {
     
   
   }
-};
-       
-         
-
-    
-  
-  }
-
   save(){
     let tasksJson = JSON.stringify(this.tasks);
     localStorage.setItem('tasks', tasksJson);
@@ -127,4 +119,13 @@ class TaskManager {
     }
   }
 };
+       
+         
+
+    
+  
+  
+
+
+
 
