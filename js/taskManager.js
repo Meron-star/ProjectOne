@@ -1,6 +1,6 @@
 
 const createTaskHtml = (id, name, description, assignedTo, dueDate, status) => {
-let html = `<div data-task-id=${id} class="card col-lg-4 col-md-6 col-sm-12 px-0">
+let html = `<div data-task-id=${id} class="card col-lg-4 col-md-6 col-sm-12 px-4 my-2">
 <div class="row cardimage">
 <img
   src="../ProjectOne/images/istockphoto-1153700372-612x612.jpg"
@@ -8,35 +8,28 @@ let html = `<div data-task-id=${id} class="card col-lg-4 col-md-6 col-sm-12 px-0
   alt="..."
 />
 </div>
-<div class="card-header bg-secondary row justify-content-center">
-<h5 class="card-title cardtitle">${name}</h5>
+<div  id = 'resetUse' class="card-header bg-secondary row justify-content-center">
+<h5 class="card-title cardtitle">Task: ${id}</h5>
 </div>
 <div class="card-body cardgreen row justify-content-center my-0 py-0">
 <ul class="list-group list-group-flush ">
-  <li class="list-group-item cardgreen border-0 " >${id}</li>
+  
   <li class="list-group-item cardgreen border-0  ">Description : ${description} </li>
   <li class="list-group-item cardgreen border-0  ">AssignedTo : ${assignedTo}</li>
   <li class="list-group-item cardgreen border-0 ">Due Date : ${dueDate}</li>
-  <li class="badge list-group-item cardgreen border-0 ${status === 'TODO'? 'badge-danger': 'badge-success'} ">Status:${status}</li>
+  <li class="badge list-group-item cardgreen border-0 ${status === 'TODO'? 'badge-primary': 'badge-success'} ">Status:${status}</li>
 </ul>
 </div>
 
-<div class="d-flex w-100 justify-content-end">
-  <button class="btn btn-info done-button ${status === 'TODO' ? 'visible' : 'invisible'}" type="button">Mark As Done</button>
-</div>
-
-
-<div class="col">
-  <button type="checkbox" class="btn btn-light delete-button" id="btn-check-2" >Delete</button>
- 
-</div>
- <!-- <a href="#" class="card-link text-left">Done</a> -->
- <!-- <a href="#" class="card-link text-left">Delete</a> -->
-</div>
+<button class="btn btn-success done-button   ${status === 'TODO' ? 'visible' : 'invisible'}" type="button">Mark As Done</button>
+<button  class="btn  btn-danger delete-button" id="btn-2" >Delete</button>
 </div>`;
   return html;
 };
 
+
+
+// class TaskManager object and methods 
 
 class TaskManager {
     constructor (crurentId = 0) {
@@ -56,6 +49,8 @@ class TaskManager {
         }
         this.tasks.push(task);
     }
+
+
 // Create the Delete task method 
     deleteTask(taskId){
       // Create an empty array and store it in a new variable, new tasks 
@@ -142,12 +137,6 @@ class TaskManager {
 
 };
        
-         
-
-    
-  
-  
-
 
 
 

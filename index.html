@@ -14,7 +14,7 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
     integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
 
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="./css/style.css">
 
 
   <!-- title -->
@@ -22,182 +22,139 @@
 </head>
 
 <body>
+
   <div class="container-fluid fullcontainer">
-  <!--Navbar Component-->
-  <nav class="navbar navbar-expand-lg navbar-light">
-    <a class="navbar-brand" href="#"><img style="   width: 100px;" src="images/ok check Todo.png" alt="todo" /></a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
 
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
-          <a class="nav-link mx-3" href="#">Home <span class="sr-only">(current)</span></a>
-        </li>
+    <!--Navbar Component-->
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <a class="navbar-brand" href="#"><img style="   width: 100px;" src="images/ok check Todo.png" alt="todo" /></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-
-        <li class="nav-item active">
-          <a class="nav-link mx-3" href="#">To do<span class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item active">
-          <a class="nav-link mx-3" href="#">Contact Us</a>
-        </li>
-        <li class="nav-item dropdown">
-
-
-
-        </li>
-
-      </ul>
-
-    </div>
-  </nav>
-
-
-  <!-- Jumbotron -->
-
-  <div class="jumbotron  jumbotron-fluid"
-    style="background:url('images/istockphoto-1153700372-612x612.jpg') no-repeat; background-size: cover;  background-position: center bottom;">
-    <div class="my-5 bg-transparent">
-      <h1 class="display-3 text-white text-center fw-bold">MSV To-Do</h1>
-
-   </div>
-  </div>
-  <!--Class container-->
-  <div class="container" id = 'addTask'>
-   
-
-    <div class="row justify-content-center">
-      <!-- <form id="taskentry" class="border border-black  pr-4"> -->
-      <div class="col-md-6 col-sm-8 d-block">
-        <div class="input-group mb-3">
-          <span class="input-group-text" id="inputGroup-sizing-default">Name</span>
-          <input id='name' type="text" class="form-control"  aria-label="Sizing example input"
-          aria-describedby="inputGroup-sizing-default" required>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
           
-            
-        </div>
-      </div>
-      <div id='alertMsg' class="alert alert-danger  col-md-6 col-sm-8 d-none" role="alert">
-        Please fill out the name field!
-      </div>
+          <li class="nav-item active">
+            <a class="nav-link mx-3" href="#">To do<span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link mx-3" href="AboutUs.html">Contact Us</a>
+          </li>
+          <li class="nav-item dropdown">
+          </li>
+          
+                </div>
+              </nav>
+        </ul>
 
+        <!-- Jumbotron -->
+    
+        <div class="jumbotron  jumbotron-fluid"
+          style="background:url('images/istockphoto-1153700372-612x612.jpg') no-repeat; background-size: cover;  background-position: center bottom;">
+          <div class="my-5 bg-transparent">
+            <h1 class="display-3 text-white text-center fw-bold">2MSV To-Do</h1>
+    
+          </div>
+        </div>
+        <!--Class container-->
+        <div class="container" >
+         <form id='addTask'>
+    
+          <div class="row justify-content-center">
+            <!-- <form id="taskentry" class="border border-black  pr-4"> -->
+            <div class="col-md-6 col-sm-8 d-block">
+              <div class="input-group mb-3">
+                <span class="input-group-text" id="inputGroup-sizing-default">Name</span>
+                <input id='name' type="text" class="form-control" aria-label="Sizing example input"
+                  aria-describedby="inputGroup-sizing-default">
+              </div>
+            </div>
+            <div id='alertMsg' class="alert alert-danger col-md-6 col-sm-8 d-none" role="alert">
+              
+              Please fill out the name field!
+            </div>
+    
+          </div>
+          
+          <div class="row justify-content-center">
+            <!-- <form id="taskentry" class="border border-black  pr-4"> -->
+            <div class="col-md-6 col-sm-8">
+              <div class="input-group mb-3">
+                <span class="input-group-text" id="inputGroup-sizing-default">Description</span>
+                <input id='description' type="text" class="form-control" aria-label="Sizing example input"
+                  aria-describedby="inputGroup-sizing-default">
+              </div>
+            </div>
+            <div id='alertDesc' class="alert alert-danger  col-md-6 col-sm-8 d-none" role="alert">
+              Please fill out the description field!
+            </div>
+          </div>
+    
+          <div class="row justify-content-center">
+            <!-- <form id="taskentry" class="border border-black  pr-4"> -->
+            <div class="col-md-6 col-sm-8">
+              <div class="input-group mb-3">
+                <span class="input-group-text" id="inputGroup-sizing-default" >Assigned To</span>
+                <input id='assigned to' class="form-control" aria-label="Sizing example input"
+                aria-describedby="inputGroup-sizing-default">
+               
+              </div>
+            </div>
+            <div id='alertAssigned' class="alert alert-danger  col-md-6 col-sm-8 d-none" role="alert">
+              Please assign to employee!
+            </div>
+          </div>
+    
+          <div class="row justify-content-center">
+            <!-- <form id="taskentry" class="border border-black  pr-4"> -->
+            <div class="col-md-6 col-sm-8">
+              <div class="input-group mb-3">
+                <span class="input-group-text" id="inputGroup-sizing-default">Due Date</span>
+                <input id='dueDate' type="date" class="form-control" aria-label="Sizing example input"
+                  aria-describedby="inputGroup-sizing-default">
+              </div>
+            </div>
+            <div id='alertdueDate' class="alert alert-danger  col-md-6 col-sm-8 d-none" role="alert">
+              Please put dueDate!
+            </div>
+          </div>
+    
+          <div class="row justify-content-center">
+    
+            <div id='alertStatus' class="alert alert-danger  col-md-6 col-sm-8 d-none" role="alert">
+              Please select status!
+            </div>
+          </div>
+          <div class="row justify-content-center">
+            <button id='btnsubmit' class="btn btn-secondary" type='submit'>Add task</button>
+          </div>
+        </form>
+      </div>
+    
+      <!--auto card add-->
+      <div class="container-fluid">
+        <div id='jsCard' class="row justify-content-center "></div>
+      </div>
+      <!-- Footer -->
+      <footer class="text-center">2021 To-do &copy;</footer>
     </div>
     
-    <div class="row justify-content-center">
-      <!-- <form id="taskentry" class="border border-black  pr-4"> -->
-      <div class="col-md-6 col-sm-8">
-        <div class="input-group mb-3">
-          <span class="input-group-text" id="inputGroup-sizing-default">Description</span>
-          <input id='description' type="text" class="form-control" aria-label="Sizing example input"
-            aria-describedby="inputGroup-sizing-default">
-        </div>
-      </div>
-      <div id='alertDesc' class="alert alert-danger  col-md-6 col-sm-8 d-none" role="alert">
-        Please fill out the description field!
-      </div>
-    </div>
-
-    <div class="row justify-content-center">
-      <!-- <form id="taskentry" class="border border-black  pr-4"> -->
-      <div class="col-md-6 col-sm-8">
-        <div class="input-group mb-3">
-          <span class="input-group-text" id="inputGroup-sizing-default">Assigned To</span>
-          <select id='select' class="form-select" aria-label="Default select example">
-            <option selected>Open this select menu</option>
-            <option value="Meron">Meron</option>
-            <option value="Seble">Seble</option>
-            <option value="Lace">Mouhamed</option>
-            <option value="Vidhya">Vidhya</option>
-          </select>
-        </div>
-      </div>
-      <div id='alertAssigned' class="alert alert-danger  col-md-6 col-sm-8 d-none" role="alert">
-        Please assign to employee!
-      </div>
-    </div>
-
-    <div class="row justify-content-center">
-      <!-- <form id="taskentry" class="border border-black  pr-4"> -->
-      <div class="col-md-6 col-sm-8">
-        <div class="input-group mb-3">
-          <span class="input-group-text" id="inputGroup-sizing-default">Due Date</span>
-          <input id='dueDate' type="date" class="form-control" aria-label="Sizing example input"
-            aria-describedby="inputGroup-sizing-default">
-        </div>
-      </div>
-      <div id='alertdueDate' class="alert alert-danger  col-md-6 col-sm-8 d-none" role="alert">
-        Please put dueDate!
-      </div>
-    </div>
- 
-    <div class="row justify-content-center">
-      <!-- <form id="taskentry" class="border border-black  pr-4"> -->
-      <!--  <div class="col-md-6 col-sm-8">
-        <div class="input-group mb-3">
-          <span class="input-group-text" id="inputGroup-sizing-default">Status</span>
-          <input id='status' class="form-select" aria-label="Default select example">
-          <option selected>Open this select menu</option>
-            <option value="Assigned">Assigned</option>
-            <option value="InProgress">InProgress</option>
-            <option value="Done">Done</option> 
-          </select>
-        </div>
-      </div>-->
-      <div id='alertStatus' class="alert alert-danger  col-md-6 col-sm-8 d-none" role="alert">
-        Please select status!
-      </div>
-    </div>
-           
-    
-    
-    <div class="row justify-content-center">
-      <button id='send' type="submit">Send</button>
-    </div>
-  </div>
-  <br>
-  
-  <div class = "container-fluid">
-    
-    <div id='jsCard' class = "row justify-content-center ">
-    </div>
-  </div>
-  
-  <!-- Footer -->
-  <footer class="text-center">2021 To-do &copy;</footer>
-   <!-- Bootstrap's JavaScript Files -->
- 
-   <!--Our linked scripts-->
-   <script src='./js/taskManager.js'></script>
-   <script src='./js/index.js'></script>
-   
-  
-
-
-
-
- 
-
-
-
-
-
-  
-
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
-  </script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
-    integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous">
-  </script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
-    integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous">
-  </script>
-  
-  </div>
-</body>
-
-</html>
+        <!-- Bootstrap's JavaScript Files -->
+          <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+          integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+          crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+          integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+          crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+          integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+          crossorigin="anonymous"></script>
+          
+          <!--Our linked scripts-->
+          <script src='./js/taskManager.js'></script>
+          <script src='./js/index.js'></script>
+        </body>
+        </html>
     

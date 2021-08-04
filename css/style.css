@@ -1,0 +1,34 @@
+.fullcontainer{
+    font-family: Helvetica;
+    background-color:#efe2ba;
+        }
+.cardgreen{
+  font-family: Helvetica;
+  background-color: #c2cad0;
+  text-align: justify;
+  font-size: x-large;
+  }
+.cardimage{
+  
+ max-block-size: inherit;
+ }
+
+ .cardtitle
+ {
+  font-family: Helvetica;
+  font-size: xx-large;
+ }
+
+
+.card{
+  background-color: #efe2ba;
+}
+
+#about{
+  margin-top: 200px;
+  padding-left: 10px;
+}
+
+body{
+  background-color:  #efe2ba;
+}

@@ -3,6 +3,7 @@
 const taskManager = new TaskManager(0);
 // call load function
 taskManager.load();
+
 // render
 taskManager.render();
 
@@ -10,9 +11,10 @@ taskManager.render();
 
 const taskName = document.getElementById('name');
 const description = document.getElementById('description');
-const assignedTo = document.getElementById('select');
+const assignedTo = document.getElementById('assigned to');
 const dueDate = document.getElementById('dueDate');
-const submit = document.getElementById('send');
+//const submitForm = document.getElementById('btnsubmit');
+const submitForm = document.getElementById('addTask');
 const cardDiv = document.getElementById('jsCard');
 
 
@@ -29,13 +31,13 @@ const statusAlert = document.getElementById('alertStatus');
 // form validation 
 const validFormFieldInput = () => {
   let nameTaskVal = taskName.value;
-  console.log('name :' + nameTaskVal );
+  //console.log('name :' + nameTaskVal );
   let descVal = description.value;
-  console.log('desc :' + descVal)
+  
   let assignedToVal = assignedTo.value;
-  console.log('assign :' + assignedToVal)
+  
   let dueDateVal = dueDate.value;
-  console.log('dueDate :' + dueDateVal )
+
 
  if(nameTaskVal === '' ){
 
@@ -49,46 +51,55 @@ const validFormFieldInput = () => {
    setTimeout(function(){
     descAlert.classList.add('d-none');
   }, 3000);
- } else if(assignedToVal=== '' || assignedToVal==='Open this select menu'){
+ } 
+ else if(assignedToVal === ''){
 
    assignedToAlert.classList.remove('d-none');
    setTimeout(function(){
     assignedToAlert.classList.add('d-none');
   }, 3000);
- } else if(dueDateVal === '' ){
-
-
-  dueDateAlert.classList.remove('d-none');
-   setTimeout(function(){
-    dueDateAlert.classList.add('d-none');
-  }, 3000);
  } 
+ else if(dueDateVal === '' ){
+   dueDateAlert.classList.remove('d-none');
+    setTimeout(function(){
+     dueDateAlert.classList.add('d-none');
+   }, 3000);
+  } 
 
-
- else {
-
-   return true;
- }
+  else {
  
-}   
+    return true;
+  }
+  
+ }   
+
+
+
+
 
 
 // add task 
  
 
-submit.addEventListener('click', function() {
+ submitForm.addEventListener('submit', function(event) {
+ event.preventDefault();
+ 
+
   // call form input validation function 
  let valid = validFormFieldInput();
   if(valid){
 
     //task.addTask();
   taskManager.addTask(taskName.value, description.value, assignedTo.value, dueDate.value, status.value);
-   taskManager.render();
+
+  taskManager.save();
+  taskManager.render();
+  
   } else {
     return true;
   }
 
-  
+  event.target.reset();
 });
 
 
@@ -99,7 +110,7 @@ taskList.addEventListener('click', (event) => {
   if(event.target.classList.contains('done-button') ){
 
     // get parent task 
-  const parentTask = event.target.parentElement.parentElement;
+  const parentTask = event.target.parentElement;
   // get the taskId of the parent task
   const taskId = Number(parentTask.dataset.taskId);
   //get the task from the TaskManager using the taskId
@@ -114,7 +125,7 @@ taskList.addEventListener('click', (event) => {
   if(event.target.classList.contains('delete-button')){
     // Get the parent task
 
-    let parentTask = event.target.parentElement.parentElement;
+    let parentTask = event.target.parentElement;
     // Get the taskId of the parent task
     let taskId = Number(parentTask.dataset.taskId);
     //delete the task 
